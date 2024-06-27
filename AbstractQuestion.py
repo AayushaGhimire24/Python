@@ -1,4 +1,5 @@
-#Create an abstract class
+'''Create an abstract classAnimal with one abstract method makesound().
+Create the derived classes Dog,Cat from Animal,Instantiate them and call makesound()'''
 from abc import ABC, abstractmethod
 class Animal(ABC):
     @abstractmethod
