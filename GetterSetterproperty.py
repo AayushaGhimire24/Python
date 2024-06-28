@@ -1,25 +1,22 @@
-'''Create a class Car with the private instance variables model and price.Create getters ans setters.
- Create a car object,set the details and print them'''
-
+''' Using property decorator'''
 class Car:
-    def __init__(self):
-        self.__model=None
-        self.__price=0
-    @model.setter
-    def set_model(self,model):
-        self.__model=model
     @property
-    def get_model(self):
+    def model(self):
         return self.__model
-    
-    @price.setter
-    def set_price(self,price):
-        self.__price=price
+    @model.setter
+    def model(self,model):
+        self.__model=model
+        
     @property
-    def get_price(self):
+    def price(self):
         return self.__price
+    @price.setter
+    def price(self,price):
+        self.__price=price
+    
 c=Car()
-c.model('Nexon')
-c.price(200000)
-print(c.model(),c.price())
+c.Model="Scorpio" #calls set_model
+c.Price=150 #calls set_price
+print(c.Model,c.Price)#calls get_model and get_price
 
+      
